@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 1. [Overview & Architecture](#overview--architecture)
 2. [Reference Platform Analysis](#reference-platform-analysis)
 3. [Official GATE DA Syllabus Coverage](#official-gate-da-syllabus-coverage)
