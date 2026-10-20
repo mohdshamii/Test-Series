@@ -1,0 +1,378 @@
+[
+  {
+    "question_id": "ps-pyq-2024-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Probability and Statistics",
+    "chapter": "Bayes Theorem",
+    "topic": "Bayes Inversion Rule",
+    "question_type": "NAT",
+    "question_text": "A spam filter is tested on an email dataset where $20\\%$ of emails are spam. An email is tested and flagged as spam. The filter correctly identifies spam emails with probability $0.90$ (true positive rate), and incorrectly flags non-spam emails as spam with probability $0.05$ (false positive rate). Using Bayes theorem, the posterior probability $P(\\text{Spam} \\mid \\text{Flagged})$ (rounded to two decimal places) is ________.",
+    "correct_answer": 0.82,
+    "tolerance": {
+      "min": 0.81,
+      "max": 0.83,
+      "exactValue": 0.818
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "bayes-rule",
+      "conditional-probability",
+      "spam-filter"
+    ],
+    "explanation": "By Bayes Theorem:\n$$P(S) = 0.20, \\quad P(\\neg S) = 0.80$$\n$$P(F \\mid S) = 0.90, \\quad P(F \\mid \\neg S) = 0.05$$\nTotal probability of being flagged:\n$$P(F) = P(F \\mid S)P(S) + P(F \\mid \\neg S)P(\\neg S) = (0.90 \\times 0.20) + (0.05 \\times 0.80) = 0.18 + 0.04 = 0.22$$\nPosterior probability:\n$$P(S \\mid F) = \\frac{P(F \\mid S)P(S)}{P(F)} = \\frac{0.18}{0.22} = \\frac{9}{11} \\approx 0.818$$\nRounding to two decimal places gives 0.82."
+  },
+  {
+    "question_id": "ps-pyq-2024-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Probability and Statistics",
+    "chapter": "Random Variables and Distributions",
+    "topic": "Poisson Distribution",
+    "question_type": "MCQ",
+    "question_text": "Let $X$ be a Poisson random variable with parameter $\\lambda > 0$ such that $P(X = 1) = P(X = 2)$. What is the variance of $X$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "4"
+      },
+      {
+        "id": "D",
+        "text": "0.5"
+      }
+    ],
+    "correct_answer": "B",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "poisson",
+      "variance"
+    ],
+    "explanation": "For a Poisson random variable $X \\sim \\text{Poisson}(\\lambda)$:\n$$P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}$$\nGiven $P(X = 1) = P(X = 2)$:\n$$\\frac{e^{-\\lambda} \\lambda^1}{1!} = \\frac{e^{-\\lambda} \\lambda^2}{2!} \\implies \\lambda = \\frac{\\lambda^2}{2} \\implies \\lambda = 2$$\nFor a Poisson distribution, $\\text{Var}(X) = \\lambda = 2$."
+  },
+  {
+    "question_id": "ps-prac-msq-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Expectation, Variance and Covariance",
+    "topic": "Covariance & Correlation",
+    "question_type": "MSQ",
+    "question_text": "Let $X$ and $Y$ be two real-valued random variables with finite second moments. Which of the following statements is/are ALWAYS TRUE?",
+    "options": [
+      {
+        "id": "A",
+        "text": "If $X$ and $Y$ are independent, then $\\text{Cov}(X, Y) = 0$."
+      },
+      {
+        "id": "B",
+        "text": "If $\\text{Cov}(X, Y) = 0$, then $X$ and $Y$ must be independent."
+      },
+      {
+        "id": "C",
+        "text": "$\\text{Var}(X - Y) = \\text{Var}(X) + \\text{Var}(Y) - 2\\,\\text{Cov}(X, Y)$."
+      },
+      {
+        "id": "D",
+        "text": "$-1 \\le \\rho(X, Y) \\le 1$, where $\\rho(X, Y)$ is the Pearson correlation coefficient."
+      }
+    ],
+    "correct_answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "covariance",
+      "independence",
+      "correlation",
+      "properties"
+    ],
+    "explanation": "- Statement A is TRUE: Independence implies zero covariance.\n- Statement B is FALSE: Zero covariance only implies absence of linear relationship (e.g. $X \\sim U[-1,1]$ and $Y = X^2$ has $\\text{Cov}(X,Y) = 0$ but $X, Y$ are dependent).\n- Statement C is TRUE: $\\text{Var}(X-Y) = \\text{Var}(X) + \\text{Var}(Y) - 2\\text{Cov}(X,Y)$.\n- Statement D is TRUE: By Cauchy-Schwarz inequality, correlation is bounded in $[-1, 1]$."
+  },
+  {
+    "question_id": "ps-prac-nat-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Statistical Inference",
+    "topic": "Central Limit Theorem (CLT)",
+    "question_type": "NAT",
+    "question_text": "A fair six-sided die is rolled $n = 100$ times independently. Let $S = \\sum_{i=1}^{100} X_i$ be the sum of numbers obtained. Using the Central Limit Theorem, the expected value $E[S]$ is ________.",
+    "correct_answer": 350,
+    "tolerance": {
+      "min": 350,
+      "max": 350,
+      "exactValue": 350
+    },
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "expectation",
+      "dice",
+      "sum-of-rvs"
+    ],
+    "explanation": "For a single fair die roll $X_i$, $E[X_i] = \\frac{1+2+3+4+5+6}{6} = 3.5$.\nBy linearity of expectation, $E[S] = E\\left[\\sum_{i=1}^{100} X_i\\right] = \\sum_{i=1}^{100} E[X_i] = 100 \\times 3.5 = 350$."
+  },
+  {
+    "question_id": "ps-prac-mcq-03",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Statistical Inference",
+    "topic": "Hypothesis Testing (p-value)",
+    "question_type": "MCQ",
+    "question_text": "In statistical hypothesis testing, if the $p$-value obtained from an observational dataset is $0.023$ and the chosen significance level is $\\alpha = 0.05$, which decision should be made?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reject the null hypothesis $H_0$."
+      },
+      {
+        "id": "B",
+        "text": "Fail to reject the null hypothesis $H_0$."
+      },
+      {
+        "id": "C",
+        "text": "Accept both the null and alternative hypotheses."
+      },
+      {
+        "id": "D",
+        "text": "The sample size is insufficient to make a decision."
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "hypothesis-testing",
+      "p-value",
+      "significance-level"
+    ],
+    "explanation": "The standard statistical decision rule states: if $p \\le \\alpha$, the evidence against the null hypothesis is statistically significant, so we reject $H_0$. Since $0.023 < 0.05$, we reject $H_0$."
+  },
+  {
+    "question_id": "PS-ORIG-101",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Probability and Conditional Probability",
+    "topic": "Independent Events",
+    "question_type": "MCQ",
+    "question_text": "Let $A$ and $B$ be two independent events with $P(A) = 0.4$ and $P(B) = 0.5$. What is $P(A \\cup B^c)$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "0.6"
+      },
+      {
+        "id": "B",
+        "text": "0.7"
+      },
+      {
+        "id": "C",
+        "text": "0.8"
+      },
+      {
+        "id": "D",
+        "text": "0.9"
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "$$ P(A \\cup B^c) = P(A) + P(B^c) - P(A \\cap B^c) $$\nSince $A$ and $B$ are independent, $A$ and $B^c$ are also independent.\n$$ P(A \\cap B^c) = P(A) \\cdot P(B^c) = 0.4 \\times (1 - 0.5) = 0.20 $$\n$$ P(A \\cup B^c) = 0.4 + 0.5 - 0.20 = 0.70. $$",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Probability",
+      "Independent Events"
+    ]
+  },
+  {
+    "question_id": "PS-ORIG-102",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Random Variables and Distributions",
+    "topic": "Poisson Distribution",
+    "question_type": "NAT",
+    "question_text": "Server requests arrive according to a Poisson process at a rate of $\\lambda = 2$ requests per second. The probability that exactly 3 requests arrive in a 2-second interval is given by $k \\cdot e^{-4}$. What is the value of $k$ (rounded to 2 decimal places)?",
+    "correct_answer": 10.67,
+    "tolerance": {
+      "min": 10.6,
+      "max": 10.7
+    },
+    "explanation": "For a time interval of $t = 2$ seconds, the mean rate is $\\mu = \\lambda t = 2 \\times 2 = 4$.\nBy the Poisson distribution:\n$$ P(X = 3) = \\frac{\\mu^3 e^{-\\mu}}{3!} = \\frac{4^3 e^{-4}}{6} = \\frac{64}{6} e^{-4} = \\frac{32}{3} e^{-4} \\approx 10.67 e^{-4}. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Poisson Distribution",
+      "Probability"
+    ]
+  },
+  {
+    "question_id": "PS-ORIG-103",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Sampling and Statistical Inference",
+    "topic": "Central Limit Theorem (CLT)",
+    "question_type": "MSQ",
+    "question_text": "Which of the following statements about the Central Limit Theorem (CLT) and Hypothesis Testing are TRUE?",
+    "options": [
+      {
+        "id": "A",
+        "text": "CLT states that the distribution of the sample mean approaches a Normal distribution as sample size $n \\to \\infty$, regardless of the underlying population distribution (provided finite variance)."
+      },
+      {
+        "id": "B",
+        "text": "A Type I error occurs when a true null hypothesis $H_0$ is rejected."
+      },
+      {
+        "id": "C",
+        "text": "If the p-value is less than the significance level $\\alpha$, we fail to reject the null hypothesis."
+      },
+      {
+        "id": "D",
+        "text": "The standard error of the sample mean scales inversely with $\\sqrt{n}$."
+      }
+    ],
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Options A, B, and D are standard correct statistical properties. Option C is false because when $p < \\alpha$, we REJECT the null hypothesis, not fail to reject it.",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "CLT",
+      "Hypothesis Testing",
+      "Inference"
+    ]
+  },
+  {
+    "question_id": "PS-ORIG-104",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Joint Distributions",
+    "topic": "Covariance & Correlation",
+    "question_type": "NAT",
+    "question_text": "Let $X$ and $Y$ be random variables with $\\text{Var}(X) = 9$, $\\text{Var}(Y) = 16$, and $\\text{Var}(2X - Y) = 28$. What is the Pearson correlation coefficient $\\rho(X, Y)$ between $X$ and $Y$?",
+    "correct_answer": 0.5,
+    "tolerance": {
+      "min": 0.49,
+      "max": 0.51
+    },
+    "explanation": "$$ \\text{Var}(2X - Y) = 4\\text{Var}(X) + \\text{Var}(Y) - 4\\text{Cov}(X, Y) $$\n$$ 28 = 4(9) + 16 - 4\\text{Cov}(X, Y) = 36 + 16 - 4\\text{Cov}(X, Y) = 52 - 4\\text{Cov}(X, Y) $$\n$$ 4\\text{Cov}(X, Y) = 52 - 28 = 24 \\implies \\text{Cov}(X, Y) = 6. $$\nNow compute correlation:\n$$ \\rho(X, Y) = \\frac{\\text{Cov}(X, Y)}{\\sigma_X \\sigma_Y} = \\frac{6}{3 \\times 4} = \\frac{6}{12} = 0.5. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Variance",
+      "Covariance",
+      "Correlation"
+    ]
+  },
+  {
+    "question_id": "PS-ORIG-105",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Expectation, Variance and Covariance",
+    "topic": "Chebyshev's Inequality",
+    "question_type": "NAT",
+    "question_text": "Let $X$ be a random variable with mean $\\mu = 50$ and standard deviation $\\sigma = 5$. Using Chebyshev's inequality, what is the lower bound for the probability $P(35 < X < 65)$? (Enter decimal between 0 and 1)",
+    "correct_answer": 0.89,
+    "tolerance": {
+      "min": 0.88,
+      "max": 0.9
+    },
+    "explanation": "The interval is $(50 - 15, 50 + 15) = (\\mu - k\\sigma, \\mu + k\\sigma)$, where $k\\sigma = 15 \\implies k = 15/5 = 3$.\nBy Chebyshev's inequality:\n$$ P(|X - \\mu| < k\\sigma) \\ge 1 - \\frac{1}{k^2} = 1 - \\frac{1}{9} = \\frac{8}{9} \\approx 0.8889 \\approx 0.89. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Chebyshev",
+      "Expectation",
+      "Variance"
+    ]
+  },
+  {
+    "question_id": "PS-ORIG-106",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Probability and Statistics",
+    "chapter": "Counting and Combinatorics",
+    "topic": "Inclusion-Exclusion Principle",
+    "question_type": "NAT",
+    "question_text": "How many integers between 1 and 300 (inclusive) are divisible by neither 3 nor 5?",
+    "correct_answer": 160,
+    "tolerance": {
+      "min": 160,
+      "max": 160
+    },
+    "explanation": "$$ |A| = \\lfloor 300/3 \\rfloor = 100 $$\n$$ |B| = \\lfloor 300/5 \\rfloor = 60 $$\n$$ |A \\cap B| = \\lfloor 300/15 \\rfloor = 20 $$\n$$ |A \\cup B| = 100 + 60 - 20 = 140 $$\nNeither = $300 - 140 = 160$.",
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Combinatorics",
+      "Inclusion Exclusion"
+    ]
+  }
+]

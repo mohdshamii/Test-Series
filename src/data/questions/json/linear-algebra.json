@@ -1,0 +1,294 @@
+[
+  {
+    "question_id": "la-pyq-2024-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Linear Algebra",
+    "chapter": "Eigenvalues and Eigenvectors",
+    "topic": "Characteristic Equation",
+    "question_type": "NAT",
+    "question_text": "Let $A$ be a $3 \\times 3$ real symmetric matrix with eigenvalues $\\lambda_1 = 2$, $\\lambda_2 = -1$, and $\\lambda_3 = 3$. The determinant of the matrix $M = A^2 - 2A + I$ is ________.",
+    "correct_answer": 16,
+    "tolerance": {
+      "min": 16,
+      "max": 16,
+      "exactValue": 16
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "eigenvalues",
+      "determinant",
+      "matrix-polynomial"
+    ],
+    "explanation": "By the spectral mapping theorem, if $\\lambda$ is an eigenvalue of $A$, then $f(\\lambda) = \\lambda^2 - 2\\lambda + 1 = (\\lambda - 1)^2$ is an eigenvalue of $M = A^2 - 2A + I$.\nFor $\\lambda_1 = 2$: $\\mu_1 = (2 - 1)^2 = 1$.\nFor $\\lambda_2 = -1$: $\\mu_2 = (-1 - 1)^2 = 4$.\nFor $\\lambda_3 = 3$: $\\mu_3 = (3 - 1)^2 = 4$.\nThe determinant of $M$ is the product of its eigenvalues:\n$$\\det(M) = \\mu_1 \\times \\mu_2 \\times \\mu_3 = 1 \\times 4 \\times 4 = 16$$."
+  },
+  {
+    "question_id": "la-pyq-2024-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Linear Algebra",
+    "chapter": "Determinants and Rank",
+    "topic": "Rank-Nullity Theorem",
+    "question_type": "MCQ",
+    "question_text": "Let $A$ be a $4 \\times 5$ real matrix with real rank $3$. Which of the following statements about the linear system $Ax = 0$ is TRUE?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The dimension of the null space of $A$ is $1$."
+      },
+      {
+        "id": "B",
+        "text": "The dimension of the null space of $A$ is $2$."
+      },
+      {
+        "id": "C",
+        "text": "The system $Ax = 0$ has only the trivial solution $x = 0$."
+      },
+      {
+        "id": "D",
+        "text": "The column space of $A$ has dimension $4$."
+      }
+    ],
+    "correct_answer": "B",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "rank-nullity",
+      "null-space",
+      "linear-systems"
+    ],
+    "explanation": "By the Rank-Nullity Theorem for an $m \\times n$ matrix:\n$$\\text{Rank}(A) + \\text{Nullity}(A) = n$$\nHere $m = 4$, $n = 5$, and $\\text{Rank}(A) = 3$.\nTherefore, $\\text{Nullity}(A) = 5 - 3 = 2$. The dimension of the null space is 2."
+  },
+  {
+    "question_id": "la-prac-msq-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Matrix Decompositions and SVD",
+    "topic": "Singular Value Decomposition (SVD)",
+    "question_type": "MSQ",
+    "question_text": "Let $A \\in \\mathbb{R}^{m \\times n}$ have singular value decomposition $A = U \\Sigma V^T$, with singular values $\\sigma_1 \\ge \\sigma_2 \\ge \\dots \\ge \\sigma_r > 0$. Which of the following statements is/are CORRECT?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The rank of $A$ equals the number of non-zero singular values $r$."
+      },
+      {
+        "id": "B",
+        "text": "The columns of $U$ are the orthonormal eigenvectors of $A A^T$."
+      },
+      {
+        "id": "C",
+        "text": "The singular values of $A$ are the square roots of the eigenvalues of $A^T A$."
+      },
+      {
+        "id": "D",
+        "text": "The Frobenius norm $|A|_F = \\sqrt{\\sum_{i=1}^r \\sigma_i^2}$."
+      }
+    ],
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "hard",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "svd",
+      "matrix-decompositions",
+      "spectral-theory"
+    ],
+    "explanation": "All four statements are foundational properties of SVD:\n- (A) $\\text{rank}(A) = r$ (number of positive singular values).\n- (B) $U$ contains left singular vectors, which are orthonormal eigenvectors of $A A^T$.\n- (C) $\\sigma_i = \\sqrt{\\lambda_i(A^T A)}$.\n- (D) By unitary invariance, $|A|_F^2 = \\text{Tr}(A^T A) = \\sum_{i=1}^r \\sigma_i^2$."
+  },
+  {
+    "question_id": "la-prac-mcq-03",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Orthogonality and Projections",
+    "topic": "Projection Matrix",
+    "question_type": "MCQ",
+    "question_text": "Let $P$ be an orthogonal projection matrix onto a subspace $S \\subset \\mathbb{R}^n$. Which of the following conditions MUST be satisfied by $P$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$P^2 = P$ and $P^T = P$"
+      },
+      {
+        "id": "B",
+        "text": "$P^2 = I$ and $P^T = -P$"
+      },
+      {
+        "id": "C",
+        "text": "$\\det(P) = 1$ always"
+      },
+      {
+        "id": "D",
+        "text": "$P$ is invertible"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "projection-matrix",
+      "idempotent",
+      "symmetric"
+    ],
+    "explanation": "A matrix $P$ represents an orthogonal projection if and only if it is idempotent ($P^2 = P$) and symmetric ($P^T = P$). Unless the subspace is the full space $\\mathbb{R}^n$, $P$ is not invertible."
+  },
+  {
+    "question_id": "LA-ORIG-101",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Orthogonality and Projections",
+    "topic": "Gram-Schmidt Process",
+    "question_type": "MCQ",
+    "question_text": "Let $v_1 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix}$ and $v_2 = \\begin{bmatrix} 1 \\\\ 0 \\\\ 1 \\end{bmatrix}$. Applying the Gram-Schmidt orthogonalization process with $u_1 = v_1$, the orthogonal vector $u_2$ is:",
+    "options": [
+      {
+        "id": "A",
+        "text": "[0.5, -0.5, 1]^T"
+      },
+      {
+        "id": "B",
+        "text": "[0.5, 0.5, 1]^T"
+      },
+      {
+        "id": "C",
+        "text": "[1, -1, 0]^T"
+      },
+      {
+        "id": "D",
+        "text": "[0, 1, -1]^T"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation": "$$ u_2 = v_2 - \\frac{\\langle v_2, u_1 \\rangle}{\\|u_1\\|^2} u_1 $$\n$$ \\langle v_2, u_1 \\rangle = (1)(1) + (0)(1) + (1)(0) = 1 $$\n$$ \\|u_1\\|^2 = 1^2 + 1^2 + 0^2 = 2 $$\n$$ u_2 = \\begin{bmatrix} 1 \\\\ 0 \\\\ 1 \\end{bmatrix} - \\frac{1}{2} \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 0.5 \\\\ -0.5 \\\\ 1 \\end{bmatrix}. $$",
+    "marks": 2,
+    "negative_marks": 0.66,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Gram Schmidt",
+      "Orthogonality",
+      "Linear Algebra"
+    ]
+  },
+  {
+    "question_id": "LA-ORIG-102",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Matrix Decompositions and SVD",
+    "topic": "Singular Value Decomposition (SVD)",
+    "question_type": "NAT",
+    "question_text": "Consider matrix $A = \\begin{bmatrix} 3 & 0 \\\\ 0 & -4 \\end{bmatrix}$. What is the largest singular value $\\sigma_1$ of matrix $A$?",
+    "correct_answer": 4,
+    "tolerance": {
+      "min": 4,
+      "max": 4
+    },
+    "explanation": "Singular values of $A$ are the square roots of the eigenvalues of $A^T A$.\n$$ A^T A = \\begin{bmatrix} 3 & 0 \\\\ 0 & -4 \\end{bmatrix} \\begin{bmatrix} 3 & 0 \\\\ 0 & -4 \\end{bmatrix} = \\begin{bmatrix} 9 & 0 \\\\ 0 & 16 \\end{bmatrix} $$\nEigenvalues are $\\lambda_1 = 16, \\lambda_2 = 9$. Thus, singular values are $\\sigma_1 = \\sqrt{16} = 4$ and $\\sigma_2 = \\sqrt{9} = 3$. The largest is 4.",
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "SVD",
+      "Singular Values",
+      "Linear Algebra"
+    ]
+  },
+  {
+    "question_id": "LA-ORIG-103",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Vector Spaces and Vectors",
+    "topic": "Rank-Nullity Theorem",
+    "question_type": "NAT",
+    "question_text": "Let $T: \\mathbb{R}^5 \\to \\mathbb{R}^3$ be a linear transformation whose null space (kernel) has dimension 2. What is the dimension of the range of $T$ (i.e., $\\text{rank}(T)$)?",
+    "correct_answer": 3,
+    "tolerance": {
+      "min": 3,
+      "max": 3
+    },
+    "explanation": "By the Rank-Nullity Theorem:\n$$ \\dim(V) = \\text{rank}(T) + \\text{nullity}(T) $$\n$$ 5 = \\text{rank}(T) + 2 \\implies \\text{rank}(T) = 3. $$",
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Rank-Nullity",
+      "Vector Spaces"
+    ]
+  },
+  {
+    "question_id": "LA-ORIG-104",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Linear Algebra",
+    "chapter": "Eigenvalues and Eigenvectors",
+    "topic": "Cayley-Hamilton Theorem",
+    "question_type": "MCQ",
+    "question_text": "Let $A$ be a $2 \\times 2$ matrix with trace $\\text{Tr}(A) = 5$ and determinant $\\det(A) = 6$. By the Cayley-Hamilton theorem, $A^2$ can be expressed as:",
+    "options": [
+      {
+        "id": "A",
+        "text": "5A - 6I"
+      },
+      {
+        "id": "B",
+        "text": "6A - 5I"
+      },
+      {
+        "id": "C",
+        "text": "-5A + 6I"
+      },
+      {
+        "id": "D",
+        "text": "5A + 6I"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation": "The characteristic polynomial of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{Tr}(A)\\lambda + \\det(A) = 0$.\nHere, $\\lambda^2 - 5\\lambda + 6 = 0$.\nBy Cayley-Hamilton theorem, $A^2 - 5A + 6I = 0 \\implies A^2 = 5A - 6I$.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Eigenvalues",
+      "Cayley Hamilton"
+    ]
+  }
+]

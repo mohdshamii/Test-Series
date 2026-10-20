@@ -1,0 +1,249 @@
+[
+  {
+    "question_id": "co-pyq-2024-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Calculus and Optimization",
+    "chapter": "Differentiation and Gradients",
+    "topic": "Gradient & Jacobian",
+    "question_type": "NAT",
+    "question_text": "Consider the scalar function $f(x_1, x_2) = 2x_1^2 + 3x_1 x_2 + 4x_2^2 - 5x_1 + 2$. The directional derivative of $f$ at the point $P(1, 1)$ in the direction of the unit vector $u = \\left(\\frac{3}{5}, \\frac{4}{5}\\right)^T$ is ________.",
+    "correct_answer": 10,
+    "tolerance": {
+      "min": 9.99,
+      "max": 10.01,
+      "exactValue": 10
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "directional-derivative",
+      "gradient",
+      "multivariate"
+    ],
+    "explanation": "First, find the gradient vector $\\nabla f(x_1, x_2)$:\n$$\\frac{\\partial f}{\\partial x_1} = 4x_1 + 3x_2 - 5$$\n$$\\frac{\\partial f}{\\partial x_2} = 3x_1 + 8x_2$$\nAt $P(1, 1)$:\n$$\\frac{\\partial f}{\\partial x_1}(1, 1) = 4(1) + 3(1) - 5 = 2$$\n$$\\frac{\\partial f}{\\partial x_2}(1, 1) = 3(1) + 8(1) = 11$$\nSo $\\nabla f(1, 1) = (2, 11)^T$.\nThe directional derivative along unit vector $u = (0.6, 0.8)^T$ is:\n$$D_u f(1, 1) = \\nabla f(1, 1) \\cdot u = (2 \\times 0.6) + (11 \\times 0.8) = 1.2 + 8.8 = 10.0$$\nWait: let us verify $(2 \\times 3/5) + (11 \\times 4/5) = (6 + 44)/5 = 50/5 = 10.0$! Correct answer is 10.0."
+  },
+  {
+    "question_id": "co-prac-msq-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Maxima, Minima and Optimization",
+    "topic": "Critical Points & Second Derivative Test",
+    "question_type": "MSQ",
+    "question_text": "Let $f: \\mathbb{R}^n \\to \\mathbb{R}$ be a twice continuously differentiable function with a stationary point at $x^*$, such that $\\nabla f(x^*) = 0$. Let $H = \\nabla^2 f(x^*)$ be the Hessian matrix evaluated at $x^*$. Which of the following statements is/are TRUE?",
+    "options": [
+      {
+        "id": "A",
+        "text": "If $H$ is positive definite, then $x^*$ is a strict local minimum."
+      },
+      {
+        "id": "B",
+        "text": "If $H$ is negative definite, then $x^*$ is a strict local maximum."
+      },
+      {
+        "id": "C",
+        "text": "If $H$ has both positive and negative eigenvalues, then $x^*$ is a saddle point."
+      },
+      {
+        "id": "D",
+        "text": "If $H$ is positive semi-definite, $x^*$ must be a strict local minimum."
+      }
+    ],
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "hessian",
+      "optimality-conditions",
+      "saddle-point"
+    ],
+    "explanation": "- (A) True: Positive definite Hessian guarantees strict local minimum.\n- (B) True: Negative definite Hessian guarantees strict local maximum.\n- (C) True: Indefinite Hessian (positive and negative eigenvalues) indicates a saddle point.\n- (D) False: Positive semi-definiteness is a necessary condition, but not sufficient for a strict local minimum (e.g. $f(x) = x^3$ at $x=0$ has $f''(0)=0$ but is an inflection point, or $f(x,y)=x^2$ has flat valley along $y$)."
+  },
+  {
+    "question_id": "co-prac-mcq-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Maxima, Minima and Optimization",
+    "topic": "Gradient Descent Algorithm",
+    "question_type": "MCQ",
+    "question_text": "For minimizing a strictly convex quadratic function $f(x) = \\frac{1}{2} x^T A x - b^T x$ using gradient descent with step size $\\eta$, where $A$ is symmetric positive definite with maximum eigenvalue $\\lambda_{\\max}$, the algorithm is guaranteed to converge if the learning rate $\\eta$ satisfies:",
+    "options": [
+      {
+        "id": "A",
+        "text": "$0 < \\eta < \\frac{2}{\\lambda_{\\max}}$"
+      },
+      {
+        "id": "B",
+        "text": "$0 < \\eta < \\frac{1}{2\\lambda_{\\max}}$"
+      },
+      {
+        "id": "C",
+        "text": "$\\eta > \\lambda_{\\max}$"
+      },
+      {
+        "id": "D",
+        "text": "$0 < \\eta < \\frac{\\lambda_{\\min}}{\\lambda_{\\max}}$"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "gradient-descent",
+      "learning-rate",
+      "convergence"
+    ],
+    "explanation": "The iteration matrix for gradient descent on quadratic objective is $I - \\eta A$. For convergence, the spectral radius must satisfy $\\rho(I - \\eta A) < 1$. Since eigenvalues of $I - \\eta A$ are $1 - \\eta \\lambda_i$, this requires $-1 < 1 - \\eta \\lambda_i < 1$, which leads directly to $0 < \\eta < \\frac{2}{\\lambda_{\\max}}$."
+  },
+  {
+    "question_id": "CO-ORIG-101",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Hessian Matrix and Taylor Series",
+    "topic": "Hessian Matrix",
+    "question_type": "MCQ",
+    "question_text": "For the multivariable function $f(x, y) = 2x^2 + 3y^2 - 4xy + 5x$, the Hessian matrix $H(x, y)$ is:",
+    "options": [
+      {
+        "id": "A",
+        "text": "[[4, -4], [-4, 6]]"
+      },
+      {
+        "id": "B",
+        "text": "[[4, -2], [-2, 6]]"
+      },
+      {
+        "id": "C",
+        "text": "[[2, -4], [-4, 3]]"
+      },
+      {
+        "id": "D",
+        "text": "[[4, 0], [0, 6]]"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation": "First derivatives:\n$$ f_x = 4x - 4y + 5, \\quad f_y = 6y - 4x $$\nSecond derivatives:\n$$ f_{xx} = 4, \\quad f_{xy} = -4, \\quad f_{yx} = -4, \\quad f_{yy} = 6 $$\nThus, $H = \\begin{bmatrix} 4 & -4 \\\\ -4 & 6 \\end{bmatrix}$.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Hessian",
+      "Multivariate Calculus"
+    ]
+  },
+  {
+    "question_id": "CO-ORIG-102",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Maxima, Minima and Optimization",
+    "topic": "Critical Points & Second Derivative Test",
+    "question_type": "MCQ",
+    "question_text": "For a function $f(x, y)$, a critical point has Hessian determinant $\\det(H) = -5$. Which of the following is true about this critical point?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It is a local minimum."
+      },
+      {
+        "id": "B",
+        "text": "It is a local maximum."
+      },
+      {
+        "id": "C",
+        "text": "It is a saddle point."
+      },
+      {
+        "id": "D",
+        "text": "The second derivative test is inconclusive."
+      }
+    ],
+    "correct_answer": "C",
+    "explanation": "By the multivariable second derivative test, if $\\det(H) < 0$ at a critical point, the Hessian matrix has eigenvalues of opposite signs, which definitively characterizes a saddle point.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Optimization",
+      "Saddle Point"
+    ]
+  },
+  {
+    "question_id": "CO-ORIG-103",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Differentiation and Gradients",
+    "topic": "Directional Derivatives",
+    "question_type": "NAT",
+    "question_text": "Find the directional derivative of $f(x, y) = x^2 y$ at the point $(1, 2)$ in the direction of unit vector $\\mathbf{u} = \\frac{1}{\\sqrt{5}}\\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix}$. (Round answer to 2 decimal places)",
+    "correct_answer": 4.02,
+    "tolerance": {
+      "min": 4,
+      "max": 4.05
+    },
+    "explanation": "Gradient vector:\n$$ \\nabla f = \\begin{bmatrix} 2xy \\\\ x^2 \\end{bmatrix} $$\nAt point $(1, 2)$:\n$$ \\nabla f(1, 2) = \\begin{bmatrix} 2(1)(2) \\\\ 1^2 \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 1 \\end{bmatrix} $$\nDirectional derivative:\n$$ D_\\mathbf{u} f = \\nabla f \\cdot \\mathbf{u} = 4\\left(\\frac{2}{\\sqrt{5}}\\right) + 1\\left(\\frac{1}{\\sqrt{5}}\\right) = \\frac{9}{\\sqrt{5}} \\approx \\frac{9}{2.23606} \\approx 4.02. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Directional Derivative",
+      "Gradient"
+    ]
+  },
+  {
+    "question_id": "CO-ORIG-104",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Calculus and Optimization",
+    "chapter": "Limits and Continuity",
+    "topic": "Multivariate Limits",
+    "question_type": "NAT",
+    "question_text": "Evaluate the limit $\\lim_{(x, y) \\to (0, 0)} \\frac{3x^2 + 3y^2}{\\sqrt{x^2 + y^2 + 1} - 1}$.",
+    "correct_answer": 6,
+    "tolerance": {
+      "min": 6,
+      "max": 6
+    },
+    "explanation": "Convert to polar coordinates $r = \\sqrt{x^2 + y^2}$. As $(x, y) \\to (0,0)$, $r \\to 0^+$.\n$$ \\lim_{r \\to 0} \\frac{3r^2}{\\sqrt{r^2 + 1} - 1} = \\lim_{r \\to 0} \\frac{3r^2 (\\sqrt{r^2 + 1} + 1)}{(r^2 + 1) - 1} = \\lim_{r \\to 0} 3(\\sqrt{r^2 + 1} + 1) = 3(1 + 1) = 6. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Calculus",
+      "Limits"
+    ]
+  }
+]

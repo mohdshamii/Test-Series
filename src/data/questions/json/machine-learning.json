@@ -1,0 +1,326 @@
+[
+  {
+    "question_id": "ml-pyq-2024-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Machine Learning",
+    "chapter": "Model Evaluation and Validation",
+    "topic": "Confusion Matrix & Precision/Recall",
+    "question_type": "NAT",
+    "question_text": "A binary classifier is evaluated on a test set of $100$ samples. The confusion matrix is given by:\n- True Positives (TP) = $40$\n- False Positives (FP) = $10$\n- False Negatives (FN) = $20$\n- True Negatives (TN) = $30$\n\nWhat is the $F_1$-score of the classifier (rounded to two decimal places)?",
+    "correct_answer": 0.73,
+    "tolerance": {
+      "min": 0.72,
+      "max": 0.74,
+      "exactValue": 0.727
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "confusion-matrix",
+      "f1-score",
+      "precision",
+      "recall"
+    ],
+    "explanation": "Precision and Recall are defined as:\n$$\\text{Precision} = \\frac{\\text{TP}}{\\text{TP} + \\text{FP}} = \\frac{40}{40 + 10} = \\frac{40}{50} = 0.80$$\n$$\\text{Recall} = \\frac{\\text{TP}}{\\text{TP} + \\text{FN}} = \\frac{40}{40 + 20} = \\frac{40}{60} = \\frac{2}{3} \\approx 0.6667$$\nThe $F_1$-score is the harmonic mean of Precision and Recall:\n$$F_1 = 2 \\times \\frac{\\text{Precision} \\times \\text{Recall}}{\\text{Precision} + \\text{Recall}} = 2 \\times \\frac{0.80 \\times (2/3)}{0.80 + 2/3} = 2 \\times \\frac{1.6/3}{4.4/3} = \\frac{3.2}{4.4} = \\frac{8}{11} \\approx 0.727$$\nRounding to two decimal places gives 0.73."
+  },
+  {
+    "question_id": "ml-pyq-2024-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "Machine Learning",
+    "chapter": "Clustering and Dimensionality Reduction (PCA)",
+    "topic": "k-Means Clustering Algorithm",
+    "question_type": "MCQ",
+    "question_text": "In the standard $k$-means clustering algorithm (Lloyd algorithm), which of the following objective functions is minimized at each iteration?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sum of squared Euclidean distances between points and their assigned cluster centroid"
+      },
+      {
+        "id": "B",
+        "text": "Maximum distance between any two cluster centroids"
+      },
+      {
+        "id": "C",
+        "text": "Manhattan distance between all pairs of points across different clusters"
+      },
+      {
+        "id": "D",
+        "text": "Sum of variances of individual feature dimensions across the entire dataset"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "kmeans",
+      "clustering",
+      "objective-function"
+    ],
+    "explanation": "$k$-means minimizes the Within-Cluster Sum of Squares (WCSS):\n$$J = \\sum_{i=1}^k \\sum_{x \\in C_i} \\|x - \\mu_i\\|^2$$\nwhere $\\mu_i$ is the centroid of cluster $C_i$."
+  },
+  {
+    "question_id": "ml-prac-msq-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Classification Algorithms (k-NN, Naive Bayes, Decision Trees, SVM)",
+    "topic": "Support Vector Machines (Margins & Kernels)",
+    "question_type": "MSQ",
+    "question_text": "Which of the following statements about Support Vector Machines (SVMs) is/are TRUE?",
+    "options": [
+      {
+        "id": "A",
+        "text": "For a linearly separable dataset, the hard-margin SVM optimal hyperplane is completely determined by the support vectors alone."
+      },
+      {
+        "id": "B",
+        "text": "Adding non-support vector training data points that lie strictly outside the margin does not change the optimal decision boundary."
+      },
+      {
+        "id": "C",
+        "text": "The soft-margin SVM parameter $C$ controls the trade-off: a very large $C$ strictly penalizes margin violations and approaches the hard-margin SVM."
+      },
+      {
+        "id": "D",
+        "text": "The Gaussian Radial Basis Function (RBF) kernel implicitly maps data into a finite 100-dimensional Hilbert space."
+      }
+    ],
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "svm",
+      "support-vectors",
+      "margins",
+      "kernels"
+    ],
+    "explanation": "- (A) True: The dual formulation solution depends only on Lagrange multipliers $\\alpha_i > 0$ which correspond precisely to the support vectors.\n- (B) True: Points outside the margin have $\\alpha_i = 0$, so their addition has no effect on the margin or normal vector $w$.\n- (C) True: High $C$ forces slack variables $\\xi_i \\to 0$, leading to hard-margin behavior.\n- (D) False: The Gaussian RBF kernel corresponds to an INFINITE-dimensional feature space (due to the infinite Taylor series expansion of $e^{-\\gamma \\|x-z\\|^2}$)."
+  },
+  {
+    "question_id": "ml-prac-mcq-03",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Loss Functions, Regularization and Optimization",
+    "topic": "L1 (Lasso) Regularization (Sparsity)",
+    "question_type": "MCQ",
+    "question_text": "Why does $L_1$ (Lasso) regularization encourage sparsity (setting weights exactly to zero), whereas $L_2$ (Ridge) regularization does not?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The $L_1$ norm constraint contour has sharp corners on the coordinate axes where the loss contours frequently touch first."
+      },
+      {
+        "id": "B",
+        "text": "The $L_1$ penalty has zero gradient everywhere, causing weights to vanish."
+      },
+      {
+        "id": "C",
+        "text": "$L_1$ regularization can only be applied to non-convex objectives."
+      },
+      {
+        "id": "D",
+        "text": "$L_2$ regularization penalizes large weights more heavily than $L_1$, eliminating small weights."
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "lasso",
+      "ridge",
+      "sparsity",
+      "regularization"
+    ],
+    "explanation": "Geometrically, the $L_1$ ball is a diamond (polytope with sharp vertices on the coordinate axes). When the elliptical contours of the unregularized loss function expand, they typically make first contact at one of these sharp corners, forcing one or more parameter coordinates to become exactly 0."
+  },
+  {
+    "question_id": "ml-prac-nat-04",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Classification Algorithms (k-NN, Naive Bayes, Decision Trees, SVM)",
+    "topic": "Decision Trees (Entropy & Information Gain)",
+    "question_type": "NAT",
+    "question_text": "A parent node in a classification decision tree has $16$ samples: $8$ of class Positive and $8$ of class Negative. The entropy of this parent node (in bits, using base-2 logarithm) is ________.",
+    "correct_answer": 1,
+    "tolerance": {
+      "min": 1,
+      "max": 1,
+      "exactValue": 1
+    },
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "entropy",
+      "decision-tree",
+      "information-gain"
+    ],
+    "explanation": "For a two-class distribution with probabilities $p_1 = 8/16 = 0.5$ and $p_2 = 8/16 = 0.5$:\n$$H(S) = -p_1 \\log_2 p_1 - p_2 \\log_2 p_2 = -(0.5 \\log_2 0.5) - (0.5 \\log_2 0.5) = -(0.5 \\times (-1)) - (0.5 \\times (-1)) = 0.5 + 0.5 = 1.0\\text{ bit}$$."
+  },
+  {
+    "question_id": "ML-ORIG-101",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Classification Algorithms (k-NN, Naive Bayes, Decision Trees, SVM)",
+    "topic": "Support Vector Machines (Margins & Kernels)",
+    "question_type": "NAT",
+    "question_text": "In a hard-margin linear Support Vector Machine (SVM), the separating hyperplane is given by $w^T x + b = 0$, where $\\|w\\|_2 = 4$. What is the geometric margin (width of the margin corridor $\\frac{2}{\\|w\\|}$)?",
+    "correct_answer": 0.5,
+    "tolerance": {
+      "min": 0.49,
+      "max": 0.51
+    },
+    "explanation": "The total margin width between the positive and negative bounding hyperplanes is:\n$$ M = \\frac{2}{\\|w\\|} = \\frac{2}{4} = 0.5. $$",
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "SVM",
+      "Margin",
+      "Machine Learning"
+    ]
+  },
+  {
+    "question_id": "ML-ORIG-102",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Loss Functions, Regularization and Optimization",
+    "topic": "L1 (Lasso) Regularization (Sparsity)",
+    "question_type": "MCQ",
+    "question_text": "Why does $L_1$ (Lasso) regularization induce sparsity in model weights compared to $L_2$ (Ridge) regularization?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Its circular constraint boundary leads to smooth shrinkage."
+      },
+      {
+        "id": "B",
+        "text": "Its diamond-shaped $L_1$ ball has corners on coordinate axes where contours of the loss function frequently intersect first."
+      },
+      {
+        "id": "C",
+        "text": "It computes the exact analytical pseudo-inverse."
+      },
+      {
+        "id": "D",
+        "text": "It has higher gradient magnitude near the origin."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "The $L_1$ norm constraint contour is a polytope with sharp vertices/corners lying exactly on the coordinate axes ($w_i = 0$), causing the unconstrained loss contours to touch at vertices where one or more parameters equal zero.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Lasso",
+      "Regularization",
+      "Sparsity"
+    ]
+  },
+  {
+    "question_id": "ML-ORIG-103",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Clustering and Dimensionality Reduction (PCA)",
+    "topic": "PCA (Covariance Eigenvectors)",
+    "question_type": "NAT",
+    "question_text": "A centered dataset in $\\mathbb{R}^3$ has covariance matrix with eigenvalues $\\lambda_1 = 5.0$, $\\lambda_2 = 3.0$, and $\\lambda_3 = 2.0$. What percentage of total variance is explained by the first principal component? (Enter value between 0 and 100)",
+    "correct_answer": 50,
+    "tolerance": {
+      "min": 50,
+      "max": 50
+    },
+    "explanation": "Total variance = $\\sum \\lambda_i = 5.0 + 3.0 + 2.0 = 10.0$.\nVariance explained by PC 1 = $\\frac{\\lambda_1}{\\sum \\lambda_i} \\times 100 = \\frac{5.0}{10.0} \\times 100 = 50\\%$.",
+    "marks": 1,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "PCA",
+      "Eigenvalues",
+      "Variance Explained"
+    ]
+  },
+  {
+    "question_id": "ML-ORIG-104",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "Machine Learning",
+    "chapter": "Linear and Logistic Regression",
+    "topic": "Binary Cross-Entropy Loss",
+    "question_type": "MCQ",
+    "question_text": "In logistic regression for binary classification, why is Binary Cross-Entropy (Log Loss) preferred over Mean Squared Error (MSE)?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MSE combined with sigmoid produces a non-convex loss surface with multiple local minima."
+      },
+      {
+        "id": "B",
+        "text": "MSE cannot compute gradients for probabilities."
+      },
+      {
+        "id": "C",
+        "text": "Binary Cross-Entropy does not require gradient descent."
+      },
+      {
+        "id": "D",
+        "text": "MSE requires an infinite learning rate."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation": "When sigmoid $\\sigma(z)$ is coupled with squared error loss $(y - \\sigma(z))^2$, the resulting optimization objective is non-convex and prone to vanishing gradients when $\\sigma(z) \\approx 0$ or $1$. Binary Cross-Entropy yields a convex optimization landscape.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Logistic Regression",
+      "Cross Entropy",
+      "Convexity"
+    ]
+  }
+]

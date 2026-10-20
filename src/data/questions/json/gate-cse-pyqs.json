@@ -1,0 +1,203 @@
+[
+  {
+    "question_id": "gate-cs-2023-q15",
+    "exam": "GATE",
+    "paper": "CS",
+    "original_paper": "CS",
+    "original_subject": "Linear Algebra",
+    "exam_year": 2023,
+    "subject": "Linear Algebra",
+    "chapter": "Determinants and Rank",
+    "topic": "Determinant Properties",
+    "question_type": "MCQ",
+    "question_text": "Let $A$ be an $n \\times n$ invertible matrix with real entries. If $\\det(A) = 3$, what is $\\det(2 A^{-1})$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$2^n / 3$"
+      },
+      {
+        "id": "B",
+        "text": "$2 / 3$"
+      },
+      {
+        "id": "C",
+        "text": "$3 \\cdot 2^n$"
+      },
+      {
+        "id": "D",
+        "text": "$6$"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "linear-algebra",
+      "determinants",
+      "gate-cse-pyq",
+      "gate-cs-2023"
+    ],
+    "explanation": "Using the properties of determinants for an $n \\times n$ matrix:\n1. $\\det(c M) = c^n \\det(M)$ for any scalar $c$.\n2. $\\det(A^{-1}) = \\frac{1}{\\det(A)}$.\nTherefore:\n$$\\det(2 A^{-1}) = 2^n \\det(A^{-1}) = \\frac{2^n}{\\det(A)} = \\frac{2^n}{3}$$."
+  },
+  {
+    "question_id": "gate-cs-2022-q28",
+    "exam": "GATE",
+    "paper": "CS",
+    "original_paper": "CS",
+    "original_subject": "Databases",
+    "exam_year": 2022,
+    "subject": "Database Management and Warehousing",
+    "chapter": "Functional Dependencies and Normalization",
+    "topic": "Normal Forms (3NF, BCNF)",
+    "question_type": "MCQ",
+    "question_text": "Consider a relation $R(A, B, C, D)$ with functional dependencies:\n$$F = \\{ A \\to B, \\; B \\to C, \\; C \\to D, \\; D \\to A \\}$$\nIn which highest normal form is relation $R$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "BCNF"
+      },
+      {
+        "id": "B",
+        "text": "3NF but not BCNF"
+      },
+      {
+        "id": "C",
+        "text": "2NF but not 3NF"
+      },
+      {
+        "id": "D",
+        "text": "1NF only"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 2,
+    "negative_marks": 0.66,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "dbms",
+      "normalization",
+      "bcnf",
+      "gate-cse-pyq",
+      "gate-cs-2022"
+    ],
+    "explanation": "Compute the candidate keys:\n$A^+ = \\{A, B, C, D\\} \\implies A$ is a candidate key.\n$B^+ = \\{B, C, D, A\\} \\implies B$ is a candidate key.\n$C^+ = \\{C, D, A, B\\} \\implies C$ is a candidate key.\n$D^+ = \\{D, A, B, C\\} \\implies D$ is a candidate key.\nSince every single determinant ($A, B, C, D$) on the LHS of the functional dependencies is a superkey (candidate key), the relation satisfies the definition of Boyce-Codd Normal Form (BCNF)."
+  },
+  {
+    "question_id": "gate-cs-2021-q42",
+    "exam": "GATE",
+    "paper": "CS",
+    "original_paper": "CS",
+    "original_subject": "Algorithms",
+    "exam_year": 2021,
+    "subject": "Programming, Data Structures & Algorithms",
+    "chapter": "Searching and Sorting Algorithms",
+    "topic": "Merge Sort & Divide-and-Conquer",
+    "question_type": "NAT",
+    "question_text": "The recurrence relation for the worst-case number of comparisons $T(n)$ in Merge Sort on an array of size $n$ is given by $T(n) = 2 T(n/2) + n - 1$ with $T(1) = 0$. For $n = 16$, the value of $T(16)$ is ________.",
+    "correct_answer": 49,
+    "tolerance": {
+      "min": 49,
+      "max": 49,
+      "exactValue": 49
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "algorithms",
+      "merge-sort",
+      "recurrence",
+      "gate-cse-pyq",
+      "gate-cs-2021"
+    ],
+    "explanation": "Evaluating the recurrence stepwise:\n- $T(1) = 0$\n- $T(2) = 2(0) + 2 - 1 = 1$\n- $T(4) = 2(1) + 4 - 1 = 2 + 3 = 5$\n- $T(8) = 2(5) + 8 - 1 = 10 + 7 = 17$\n- $T(16) = 2(17) + 16 - 1 = 34 + 15 = 49$.\nHence, $T(16) = 49$."
+  },
+  {
+    "question_id": "gate-cs-2020-q18",
+    "exam": "GATE",
+    "paper": "CS",
+    "original_paper": "CS",
+    "original_subject": "Discrete Mathematics",
+    "exam_year": 2020,
+    "subject": "Probability and Statistics",
+    "chapter": "Counting and Combinatorics",
+    "topic": "Inclusion-Exclusion Principle",
+    "question_type": "NAT",
+    "question_text": "What is the number of integers between $1$ and $1000$ (both inclusive) that are divisible by neither $3$ nor $5$?",
+    "correct_answer": 533,
+    "tolerance": {
+      "min": 533,
+      "max": 533,
+      "exactValue": 533
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "combinatorics",
+      "inclusion-exclusion",
+      "gate-cse-pyq",
+      "gate-cs-2020"
+    ],
+    "explanation": "Using Principle of Inclusion-Exclusion:\n- Divisible by 3: $\\lfloor 1000 / 3 \\rfloor = 333$.\n- Divisible by 5: $\\lfloor 1000 / 5 \\rfloor = 200$.\n- Divisible by both (15): $\\lfloor 1000 / 15 \\rfloor = 66$.\nTotal divisible by 3 or 5 = $333 + 200 - 66 = 467$.\nNumber divisible by neither = $1000 - 467 = 533$."
+  },
+  {
+    "question_id": "gate-cs-2019-q35",
+    "exam": "GATE",
+    "paper": "CS",
+    "original_paper": "CS",
+    "original_subject": "Databases",
+    "exam_year": 2019,
+    "subject": "Database Management and Warehousing",
+    "chapter": "Relational Model and Relational Algebra",
+    "topic": "Relational Algebra (Select, Project, Join)",
+    "question_type": "MCQ",
+    "question_text": "Let $R(A, B)$ and $S(B, C)$ be two relations. In relational algebra, which of the following expressions is equivalent to the natural join $R \\bowtie S$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\pi_{A, R.B, C} (\\sigma_{R.B = S.B} (R \\times S))$"
+      },
+      {
+        "id": "B",
+        "text": "$\\sigma_{R.B = S.B} (R \\times S)$"
+      },
+      {
+        "id": "C",
+        "text": "$\\pi_{A, B, C} (R \\cup S)$"
+      },
+      {
+        "id": "D",
+        "text": "$\\pi_{A, C} (R \\cap S)$"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "relational-algebra",
+      "natural-join",
+      "gate-cse-pyq",
+      "gate-cs-2019"
+    ],
+    "explanation": "By definition, Natural Join performs Cartesian product ($R \\times S$), filters on equality of common attributes ($\\sigma_{R.B = S.B}$), and projects out the duplicate join attribute ($\\pi_{A, R.B, C}$). Hence Option A is correct."
+  }
+]

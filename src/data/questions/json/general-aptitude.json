@@ -1,0 +1,408 @@
+[
+  {
+    "question_id": "ga-pyq-2024-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "General Aptitude",
+    "chapter": "Verbal Aptitude",
+    "topic": "Vocabulary in Context",
+    "question_type": "MCQ",
+    "question_text": "If \"→\" denotes increasing order of intensity, the meaning of the words [damp → wet → soaked] is analogous to [subdued → quiet → ?]. Which of the following words best completes the sequence?",
+    "options": [
+      {
+        "id": "A",
+        "text": "silent"
+      },
+      {
+        "id": "B",
+        "text": "loud"
+      },
+      {
+        "id": "C",
+        "text": "muffled"
+      },
+      {
+        "id": "D",
+        "text": "faint"
+      }
+    ],
+    "correct_answer": "A",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "verbal",
+      "analogy",
+      "intensity"
+    ],
+    "explanation": "The sequence damp → wet → soaked shows increasing wetness up to the complete saturation. Similarly, subdued → quiet → silent shows increasing absence of sound up to complete quietude (silent)."
+  },
+  {
+    "question_id": "ga-pyq-2024-02",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "General Aptitude",
+    "chapter": "Quantitative Aptitude",
+    "topic": "Permutations & Combinations",
+    "question_type": "MCQ",
+    "question_text": "A committee of $4$ members is to be selected from a group of $5$ men and $4$ women. If the committee must contain at least $2$ women, how many distinct ways can this committee be formed?",
+    "options": [
+      {
+        "id": "A",
+        "text": "75"
+      },
+      {
+        "id": "B",
+        "text": "81"
+      },
+      {
+        "id": "C",
+        "text": "90"
+      },
+      {
+        "id": "D",
+        "text": "105"
+      }
+    ],
+    "correct_answer": "B",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "combinatorics",
+      "committee"
+    ],
+    "explanation": "Cases for selecting at least 2 women out of 4 women (W) and 5 men (M):\n- Case 1: 2 Women and 2 Men = $\\binom{4}{2} \\times \\binom{5}{2} = 6 \\times 10 = 60$\n- Case 2: 3 Women and 1 Man = $\\binom{4}{3} \\times \\binom{5}{1} = 4 \\times 5 = 20$\n- Case 3: 4 Women and 0 Men = $\\binom{4}{4} \\times \\binom{5}{0} = 1 \\times 1 = 1$\nTotal ways = $60 + 20 + 1 = 81$."
+  },
+  {
+    "question_id": "ga-pyq-2024-03",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "General Aptitude",
+    "chapter": "Analytical Aptitude",
+    "topic": "Deductive & Inductive Reasoning",
+    "question_type": "MCQ",
+    "question_text": "Consider the statements:\n1. All data scientists write code.\n2. Some software engineers write code.\n3. No hardware engineer writes code.\n\nWhich of the following conclusions can be logically deduced?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Some data scientists are software engineers."
+      },
+      {
+        "id": "B",
+        "text": "No data scientist is a hardware engineer."
+      },
+      {
+        "id": "C",
+        "text": "All software engineers are data scientists."
+      },
+      {
+        "id": "D",
+        "text": "Some hardware engineers are data scientists."
+      }
+    ],
+    "correct_answer": "B",
+    "marks": 2,
+    "negative_marks": 0.66,
+    "difficulty": "medium",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "syllogism",
+      "deduction"
+    ],
+    "explanation": "From (1), if someone is a data scientist, they write code ($DS \\subseteq Code$). From (3), hardware engineers do not write code ($HW \\cap Code = \\emptyset$). Since $DS$ is entirely inside $Code$, no data scientist can be a hardware engineer ($DS \\cap HW = \\emptyset$). Hence, conclusion B is logically valid."
+  },
+  {
+    "question_id": "ga-pyq-2024-04",
+    "exam": "GATE",
+    "paper": "DA",
+    "exam_year": 2024,
+    "subject": "General Aptitude",
+    "chapter": "Spatial Aptitude",
+    "topic": "Shape Assembly",
+    "question_type": "MCQ",
+    "question_text": "A square transparent sheet with a pattern is folded along the dotted line passing through its center. When folded from left to right, which figure will correctly result?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Figure with pattern overlapping along right edge"
+      },
+      {
+        "id": "B",
+        "text": "Figure with horizontal inversion"
+      },
+      {
+        "id": "C",
+        "text": "Figure with superimposed symmetrical triangle"
+      },
+      {
+        "id": "D",
+        "text": "Figure with vertically flipped quadrant"
+      }
+    ],
+    "correct_answer": "C",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "official_pyq",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "spatial",
+      "paper-folding"
+    ],
+    "explanation": "Folding along the vertical midline causes the left half to mirror onto the right half, resulting in the superimposed symmetrical shape."
+  },
+  {
+    "question_id": "ga-prac-01",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Quantitative Aptitude",
+    "topic": "Data Interpretation (Charts/Graphs)",
+    "question_type": "NAT",
+    "question_text": "In an ML lab, the number of GPUs used increased by $20\\%$ from year 2022 to 2023, and increased further by $25\\%$ from 2023 to 2024. If there were $120$ GPUs in 2022, what is the total number of GPUs in 2024?",
+    "correct_answer": 180,
+    "tolerance": {
+      "min": 180,
+      "max": 180,
+      "exactValue": 180
+    },
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "percentages",
+      "successive-change"
+    ],
+    "explanation": "Number in 2023 = $120 \\times 1.20 = 144$.\nNumber in 2024 = $144 \\times 1.25 = 180$.\nAlternatively, effective growth = $1.20 \\times 1.25 = 1.50$, so $120 \\times 1.50 = 180$."
+  },
+  {
+    "question_id": "GA-ORIG-101",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Verbal Aptitude",
+    "topic": "Sentence Completion",
+    "question_type": "MCQ",
+    "question_text": "Choose the word that best completes the sentence:\n\n\"The research team's findings were so ________ that even the most skeptical scientists were compelled to re-examine their long-held hypotheses.\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "ambiguous"
+      },
+      {
+        "id": "B",
+        "text": "persuasive"
+      },
+      {
+        "id": "C",
+        "text": "dubious"
+      },
+      {
+        "id": "D",
+        "text": "inconsequential"
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "\"Persuasive\" (or compelling) logically fits the consequence that skeptics were forced to reconsider their long-held hypotheses.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Verbal",
+      "Vocabulary",
+      "Sentence Completion"
+    ]
+  },
+  {
+    "question_id": "GA-ORIG-102",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Quantitative Aptitude",
+    "topic": "Permutations & Combinations",
+    "question_type": "NAT",
+    "question_text": "In how many different ways can a committee of 4 data scientists be selected from a pool of 6 machine learning engineers and 5 data analysts such that the committee contains at least 2 machine learning engineers?",
+    "correct_answer": 265,
+    "tolerance": {
+      "min": 265,
+      "max": 265
+    },
+    "explanation": "Total ways = (2 ML & 2 Analysts) + (3 ML & 1 Analyst) + (4 ML & 0 Analysts)\n\n$$ = \\binom{6}{2}\\binom{5}{2} + \\binom{6}{3}\\binom{5}{1} + \\binom{6}{4}\\binom{5}{0} $$\n$$ = (15 \\times 10) + (20 \\times 5) + (15 \\times 1) = 150 + 100 + 15 = 265. $$",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Combinatorics",
+      "Quantitative Aptitude"
+    ]
+  },
+  {
+    "question_id": "GA-ORIG-103",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Analytical Aptitude",
+    "topic": "Syllogism",
+    "question_type": "MCQ",
+    "question_text": "Consider the following statements:\n1. All algorithms are procedures.\n2. Some procedures are recursive.\n\nWhich of the following conclusions logically follows with certainty?",
+    "options": [
+      {
+        "id": "A",
+        "text": "All algorithms are recursive."
+      },
+      {
+        "id": "B",
+        "text": "Some algorithms are recursive."
+      },
+      {
+        "id": "C",
+        "text": "No algorithm is recursive."
+      },
+      {
+        "id": "D",
+        "text": "None of the above conclusions necessarily follows."
+      }
+    ],
+    "correct_answer": "D",
+    "explanation": "Since \"procedures\" is an undistributed middle term between algorithms and recursive entities, no definite relationship can be asserted between algorithms and recursive procedures with absolute certainty.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Analytical Aptitude",
+      "Syllogism",
+      "Logic"
+    ]
+  },
+  {
+    "question_id": "GA-ORIG-104",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Spatial Aptitude",
+    "topic": "Paper Folding & Cutting",
+    "question_type": "MCQ",
+    "question_text": "A square sheet of paper is folded in half diagonally, then folded in half again to form a smaller triangle, and a circular hole is punched through the center. When completely unfolded, how many circular holes will appear on the paper?",
+    "options": [
+      {
+        "id": "A",
+        "text": "2"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "8"
+      },
+      {
+        "id": "D",
+        "text": "16"
+      }
+    ],
+    "correct_answer": "B",
+    "explanation": "The paper is folded twice, creating 4 layers of thickness ($2^2 = 4$). A single punch through all layers results in exactly 4 holes when unfolded.",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "difficulty": "easy",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Spatial Aptitude",
+      "Paper Folding"
+    ]
+  },
+  {
+    "question_id": "GA-ORIG-105",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Verbal Aptitude",
+    "topic": "Reading Comprehension",
+    "question_type": "MCQ",
+    "question_text": "Read the following excerpt:\n\"While artificial intelligence has dramatically augmented pattern recognition in high-dimensional datasets, its opacity presents formidable challenges for clinical diagnostics where interpretable causality is non-negotiable.\"\n\nWhich statement is best supported by the passage?",
+    "options": [
+      {
+        "id": "A",
+        "text": "High-dimensional datasets cannot be processed by artificial intelligence."
+      },
+      {
+        "id": "B",
+        "text": "Pattern recognition is unimportant in medical diagnostics."
+      },
+      {
+        "id": "C",
+        "text": "Clinical diagnostics requires transparent causal reasoning that black-box AI often lacks."
+      },
+      {
+        "id": "D",
+        "text": "Artificial intelligence has replaced medical practitioners in clinical diagnostics."
+      }
+    ],
+    "correct_answer": "C",
+    "explanation": "The passage highlights that while AI excels at pattern recognition, its \"opacity\" (black-box nature) conflicts with clinical requirements where \"interpretable causality is non-negotiable\".",
+    "marks": 2,
+    "negative_marks": 0.66,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Verbal Aptitude",
+      "Reading Comprehension"
+    ]
+  },
+  {
+    "question_id": "GA-ORIG-106",
+    "exam": "GATE",
+    "paper": "DA",
+    "subject": "General Aptitude",
+    "chapter": "Quantitative Aptitude",
+    "topic": "Percentages & Ratios",
+    "question_type": "NAT",
+    "question_text": "In an engineering cohort, the ratio of computer science to data science students was $5 : 3$. If 20 new data science students join and 10 computer science students leave, the ratio becomes $1 : 1$. What was the original total number of students in the cohort?",
+    "correct_answer": 120,
+    "tolerance": {
+      "min": 120,
+      "max": 120
+    },
+    "explanation": "Let original numbers be $5x$ and $3x$.\n$$ \\frac{5x - 10}{3x + 20} = 1 \\implies 5x - 10 = 3x + 20 \\implies 2x = 30 \\implies x = 15. $$\nOriginal total = $5x + 3x = 8x = 8(15) = 120$.",
+    "marks": 2,
+    "negative_marks": 0,
+    "difficulty": "medium",
+    "source_type": "original",
+    "da_relevance": "direct",
+    "verification_status": "verified",
+    "tags": [
+      "Quantitative Aptitude",
+      "Ratios"
+    ]
+  }
+]

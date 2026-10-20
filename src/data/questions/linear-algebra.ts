@@ -1,0 +1,101 @@
+import { Question } from '../../types/question';
+
+export const LINEAR_ALGEBRA_QUESTIONS: Question[] = [
+  {
+    question_id: 'la-pyq-2024-01',
+    exam: 'GATE',
+    paper: 'DA',
+    exam_year: 2024,
+    subject: 'Linear Algebra',
+    chapter: 'Eigenvalues and Eigenvectors',
+    topic: 'Characteristic Equation',
+    question_type: 'NAT',
+    question_text: 'Let $A$ be a $3 \\times 3$ real symmetric matrix with eigenvalues $\\lambda_1 = 2$, $\\lambda_2 = -1$, and $\\lambda_3 = 3$. The determinant of the matrix $M = A^2 - 2A + I$ is ________.',
+    correct_answer: 16,
+    tolerance: { min: 16, max: 16, exactValue: 16 },
+    marks: 2,
+    negative_marks: 0,
+    difficulty: 'medium',
+    source_type: 'official_pyq',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['eigenvalues', 'determinant', 'matrix-polynomial'],
+    explanation: 'By the spectral mapping theorem, if $\\lambda$ is an eigenvalue of $A$, then $f(\\lambda) = \\lambda^2 - 2\\lambda + 1 = (\\lambda - 1)^2$ is an eigenvalue of $M = A^2 - 2A + I$.\nFor $\\lambda_1 = 2$: $\\mu_1 = (2 - 1)^2 = 1$.\nFor $\\lambda_2 = -1$: $\\mu_2 = (-1 - 1)^2 = 4$.\nFor $\\lambda_3 = 3$: $\\mu_3 = (3 - 1)^2 = 4$.\nThe determinant of $M$ is the product of its eigenvalues:\n$$\\det(M) = \\mu_1 \\times \\mu_2 \\times \\mu_3 = 1 \\times 4 \\times 4 = 16$$.'
+  },
+  {
+    question_id: 'la-pyq-2024-02',
+    exam: 'GATE',
+    paper: 'DA',
+    exam_year: 2024,
+    subject: 'Linear Algebra',
+    chapter: 'Determinants and Rank',
+    topic: 'Rank-Nullity Theorem',
+    question_type: 'MCQ',
+    question_text: 'Let $A$ be a $4 \\times 5$ real matrix with real rank $3$. Which of the following statements about the linear system $Ax = 0$ is TRUE?',
+    options: [
+      { id: 'A', text: 'The dimension of the null space of $A$ is $1$.' },
+      { id: 'B', text: 'The dimension of the null space of $A$ is $2$.' },
+      { id: 'C', text: 'The system $Ax = 0$ has only the trivial solution $x = 0$.' },
+      { id: 'D', text: 'The column space of $A$ has dimension $4$.' }
+    ],
+    correct_answer: 'B',
+    marks: 1,
+    negative_marks: 0.33,
+    difficulty: 'easy',
+    source_type: 'official_pyq',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['rank-nullity', 'null-space', 'linear-systems'],
+    explanation: 'By the Rank-Nullity Theorem for an $m \\times n$ matrix:\n$$\\text{Rank}(A) + \\text{Nullity}(A) = n$$\nHere $m = 4$, $n = 5$, and $\\text{Rank}(A) = 3$.\nTherefore, $\\text{Nullity}(A) = 5 - 3 = 2$. The dimension of the null space is 2.'
+  },
+  {
+    question_id: 'la-prac-msq-01',
+    exam: 'GATE',
+    paper: 'DA',
+    subject: 'Linear Algebra',
+    chapter: 'Matrix Decompositions and SVD',
+    topic: 'Singular Value Decomposition (SVD)',
+    question_type: 'MSQ',
+    question_text: 'Let $A \\in \\mathbb{R}^{m \\times n}$ have singular value decomposition $A = U \\Sigma V^T$, with singular values $\\sigma_1 \\ge \\sigma_2 \\ge \\dots \\ge \\sigma_r > 0$. Which of the following statements is/are CORRECT?',
+    options: [
+      { id: 'A', text: 'The rank of $A$ equals the number of non-zero singular values $r$.' },
+      { id: 'B', text: 'The columns of $U$ are the orthonormal eigenvectors of $A A^T$.' },
+      { id: 'C', text: 'The singular values of $A$ are the square roots of the eigenvalues of $A^T A$.' },
+      { id: 'D', text: 'The Frobenius norm $\|A\|_F = \\sqrt{\\sum_{i=1}^r \\sigma_i^2}$.' }
+    ],
+    correct_answer: ['A', 'B', 'C', 'D'],
+    marks: 2,
+    negative_marks: 0,
+    difficulty: 'hard',
+    source_type: 'original',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['svd', 'matrix-decompositions', 'spectral-theory'],
+    explanation: 'All four statements are foundational properties of SVD:\n- (A) $\\text{rank}(A) = r$ (number of positive singular values).\n- (B) $U$ contains left singular vectors, which are orthonormal eigenvectors of $A A^T$.\n- (C) $\\sigma_i = \\sqrt{\\lambda_i(A^T A)}$.\n- (D) By unitary invariance, $\|A\|_F^2 = \\text{Tr}(A^T A) = \\sum_{i=1}^r \\sigma_i^2$.'
+  },
+  {
+    question_id: 'la-prac-mcq-03',
+    exam: 'GATE',
+    paper: 'DA',
+    subject: 'Linear Algebra',
+    chapter: 'Orthogonality and Projections',
+    topic: 'Projection Matrix',
+    question_type: 'MCQ',
+    question_text: 'Let $P$ be an orthogonal projection matrix onto a subspace $S \\subset \\mathbb{R}^n$. Which of the following conditions MUST be satisfied by $P$?',
+    options: [
+      { id: 'A', text: '$P^2 = P$ and $P^T = P$' },
+      { id: 'B', text: '$P^2 = I$ and $P^T = -P$' },
+      { id: 'C', text: '$\\det(P) = 1$ always' },
+      { id: 'D', text: '$P$ is invertible' }
+    ],
+    correct_answer: 'A',
+    marks: 1,
+    negative_marks: 0.33,
+    difficulty: 'easy',
+    source_type: 'original',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['projection-matrix', 'idempotent', 'symmetric'],
+    explanation: 'A matrix $P$ represents an orthogonal projection if and only if it is idempotent ($P^2 = P$) and symmetric ($P^T = P$). Unless the subspace is the full space $\\mathbb{R}^n$, $P$ is not invertible.'
+  }
+];

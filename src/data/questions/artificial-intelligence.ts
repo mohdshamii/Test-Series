@@ -1,0 +1,101 @@
+import { Question } from '../../types/question';
+
+export const ARTIFICIAL_INTELLIGENCE_QUESTIONS: Question[] = [
+  {
+    question_id: 'ai-pyq-2024-01',
+    exam: 'GATE',
+    paper: 'DA',
+    exam_year: 2024,
+    subject: 'Artificial Intelligence',
+    chapter: 'Search Algorithms and Heuristics (BFS, DFS, A*)',
+    topic: 'Admissible & Consistent Heuristics',
+    question_type: 'MCQ',
+    question_text: 'For the $A^*$ search algorithm running on a general graph with non-negative edge costs, which condition ensures that the first time a goal node is expanded, the path found is guaranteed to be OPTIMAL without needing to re-open closed nodes?',
+    options: [
+      { id: 'A', text: 'The heuristic $h(n)$ must be consistent (monotonic).' },
+      { id: 'B', text: 'The heuristic $h(n)$ must be strictly non-admissible.' },
+      { id: 'C', text: 'The heuristic $h(n)$ must be greater than the true cost $h^*(n)$ for all nodes.' },
+      { id: 'D', text: 'The branching factor of the search tree must be less than 2.' }
+    ],
+    correct_answer: 'A',
+    marks: 1,
+    negative_marks: 0.33,
+    difficulty: 'medium',
+    source_type: 'official_pyq',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['a-star', 'heuristic', 'admissibility', 'consistency'],
+    explanation: 'On a graph (as opposed to a tree), admissibility alone ($h(n) \\le h^*(n)$) only guarantees optimality if nodes can be re-opened when a cheaper path is found. If the heuristic is consistent (satisfies triangle inequality $h(n) \\le c(n, a, n\') + h(n\')$), the $f$-values along any path are non-decreasing, guaranteeing that when any node is expanded for the first time, the shortest path to it has already been discovered, so no closed nodes need re-opening.'
+  },
+  {
+    question_id: 'ai-pyq-2024-02',
+    exam: 'GATE',
+    paper: 'DA',
+    exam_year: 2024,
+    subject: 'Artificial Intelligence',
+    chapter: 'Adversarial Search (Minimax, Alpha-Beta Pruning)',
+    topic: 'Alpha-Beta Pruning Cutoffs',
+    question_type: 'NAT',
+    question_text: 'In a two-player zero-sum game tree of depth $2$ (root is MAX at depth $0$, children are MIN at depth $1$, leaf nodes at depth $2$ evaluated from left to right):\n- Left child of root has leaves with values $3, 12, 8$.\n- Right child of root has first leaf with value $2$.\n\nBecause of Alpha-Beta pruning, how many leaf evaluations under the right child are pruned (skipped)?',
+    correct_answer: 2,
+    tolerance: { min: 2, max: 2, exactValue: 2 },
+    marks: 2,
+    negative_marks: 0,
+    difficulty: 'medium',
+    source_type: 'official_pyq',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['alpha-beta-pruning', 'minimax', 'game-tree'],
+    explanation: 'Step 1: Evaluate left branch (MIN node):\nLeaves are 3, 12, 8. The minimum is $\\min(3, 12, 8) = 3$.\nRoot (MAX) updates its alpha value: $\\alpha = \\max(-\\infty, 3) = 3$.\n\nStep 2: Evaluate right branch (MIN node, beta initialized to $+\\infty$, inherited alpha = 3):\nFirst leaf is 2. The MIN node updates its beta: $\\beta = \\min(+\\infty, 2) = 2$.\n\nStep 3: Check pruning condition:\nHere $\\alpha = 3$ and $\\beta = 2$. Since $\\alpha \\ge \\beta$ ($3 \\ge 2$), a beta cutoff occurs immediately!\nThe remaining 2 leaves under the right MIN node are pruned without evaluation. Hence, 2 leaf evaluations are skipped.'
+  },
+  {
+    question_id: 'ai-prac-msq-01',
+    exam: 'GATE',
+    paper: 'DA',
+    subject: 'Artificial Intelligence',
+    chapter: 'Bayesian Networks and Probabilistic Reasoning',
+    topic: 'd-Separation & Conditional Independence',
+    question_type: 'MSQ',
+    question_text: 'Consider three random variables $X, Y, Z$ in a Bayesian Network. Which of the following statements about d-separation and conditional independence is/are TRUE?',
+    options: [
+      { id: 'A', text: 'In a causal chain $X \\to Y \\to Z$, $X$ and $Z$ are conditionally independent given $Y$ ($X \\perp Z \\mid Y$).' },
+      { id: 'B', text: 'In a common cause network $X \\leftarrow Y \\to Z$, $X$ and $Z$ are conditionally independent given $Y$ ($X \\perp Z \\mid Y$).' },
+      { id: 'C', text: 'In a v-structure (collider) $X \\to Y \\leftarrow Z$, $X$ and $Z$ are marginally independent ($X \\perp Z \\mid \\emptyset$).' },
+      { id: 'D', text: 'In a v-structure $X \\to Y \\leftarrow Z$, conditioning on $Y$ keeps $X$ and $Z$ independent.' }
+    ],
+    correct_answer: ['A', 'B', 'C'],
+    marks: 2,
+    negative_marks: 0,
+    difficulty: 'medium',
+    source_type: 'original',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['bayesian-network', 'd-separation', 'collider', 'conditional-independence'],
+    explanation: '- (A) True: In a chain $X \\to Y \\to Z$, conditioning on the middle node $Y$ blocks the path, rendering $X$ and $Z$ conditionally independent.\n- (B) True: In a fork (common cause) $X \\leftarrow Y \\to Z$, conditioning on the common cause $Y$ blocks the path.\n- (C) True: In a collider (v-structure) $X \\to Y \\leftarrow Z$, the path is inactive by default without conditioning on $Y$ or its descendants, so $X$ and $Z$ are marginally independent.\n- (D) False: Conditioning on the collider $Y$ (or its descendant) ACTIVATES the path ("explaining away" phenomenon), making $X$ and $Z$ dependent!'
+  },
+  {
+    question_id: 'ai-prac-mcq-03',
+    exam: 'GATE',
+    paper: 'DA',
+    subject: 'Artificial Intelligence',
+    chapter: 'Propositional and Predicate Logic',
+    topic: 'Propositional Logic Connectives & Equivalence',
+    question_type: 'MCQ',
+    question_text: 'Which of the following propositional logic formulas is a TAUTOLOGY (valid in every truth assignment)?',
+    options: [
+      { id: 'A', text: '$((P \\implies Q) \\land P) \\implies Q$' },
+      { id: 'B', text: '$(P \\lor Q) \\implies (P \\land Q)$' },
+      { id: 'C', text: '$(P \\implies Q) \\implies (Q \\implies P)$' },
+      { id: 'D', text: '$(P \\implies \\neg P) \\lor P$' }
+    ],
+    correct_answer: 'A',
+    marks: 1,
+    negative_marks: 0.33,
+    difficulty: 'easy',
+    source_type: 'original',
+    da_relevance: 'direct',
+    verification_status: 'verified',
+    tags: ['propositional-logic', 'tautology', 'modus-ponens'],
+    explanation: 'Option A represents the classical inference rule Modus Ponens:\n$$((P \\implies Q) \\land P) \\implies Q \\equiv ((\\neg P \\lor Q) \\land P) \\implies Q \\equiv (P \\land Q) \\implies Q \\equiv \\neg(P \\land Q) \\lor Q \\equiv \\neg P \\lor \\neg Q \\lor Q \\equiv \\text{True}$$.\nThis is always true regardless of the truth values of $P$ and $Q$.'
+  }
+];
