@@ -11,25 +11,6 @@
 [[MachineLearnng]](https://mohdshamii.github.io/Machine-Learning)
 
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-6-646cff.svg)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com/)
-
----
-
-##  Table of Contents
-1. [Overview & Architecture](#overview--architecture)
-2. [Reference Platform Analysis](#reference-platform-analysis)
-3. [Official GATE DA Syllabus Coverage](#official-gate-da-syllabus-coverage)
-4. [Mock Examination Catalogue (100 Tests)](#mock-examination-catalogue-100-tests)
-5. [CBT Examination Engine & Scoring Rules](#cbt-examination-engine--scoring-rules)
-6. [Structured JSON Question Bank](#structured-json-question-bank)
-7. [How to Add New Questions & Tests](#how-to-add-new-questions--tests)
-8. [Client Persistence & Local Storage](#client-persistence--local-storage)
-9. [Development & Validation](#development--validation)
-10. [GitHub Pages Deployment Guide](#github-pages-deployment-guide)
-
 ---
 
 ## 1. Overview & Architecture
