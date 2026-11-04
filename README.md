@@ -4,13 +4,13 @@
 
 
 
-[![Gate-Preparation]](https://mohdshamii.github.io/GateDA)
-[![Test-Series]](https://mohdshamii.github.io/Test-Series)
-[![Python_DSA]](https://mohdshamii.github.io/PyDSA)
-[![DSA]](https://mohdshamii.github.io/DSAos)
-[![MachineLearnng]](https://mohdshamii.github.io/Machine-Learning)
+[[Gate-Preparation]](https://mohdshamii.github.io/GateDA)
+[[Test-Series]](https://mohdshamii.github.io/Test-Series)
+[[Python_DSA]](https://mohdshamii.github.io/PyDSA)
+[[DSA]](https://mohdshamii.github.io/DSAos)
+[[MachineLearnng]](https://mohdshamii.github.io/Machine-Learning)
 
-[![GitHub Actions Deploy](https://github.com/gate-da/test-series/actions/workflows/deploy.yml/badge.svg)](https://github.com/gate-da/test-series/actions)
+
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6-646cff.svg)](https://vitejs.dev/)
